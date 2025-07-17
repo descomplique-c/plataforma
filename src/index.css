@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 204 62% 22%; /* #1b456b */
+    --foreground: 0 0% 100%; /* white */
+
+    --card: 204 62% 22%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 204 62% 22%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 46 100% 55%; /* #ffbc1d */
+    --primary-foreground: 204 62% 22%;
+
+    --secondary: 204 62% 28%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 204 62% 30%;
+    --muted-foreground: 0 0% 80%;
+
+    --accent: 46 100% 55%;
+    --accent-foreground: 204 62% 22%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 204 62% 35%;
+    --input: 204 62% 35%;
+    --ring: 46 100% 55%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 204 62% 18%;
+    --foreground: 0 0% 100%;
+
+    --card: 204 62% 18%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 204 62% 18%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 46 100% 55%;
+    --primary-foreground: 204 62% 18%;
+
+    --secondary: 204 62% 25%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 204 62% 28%;
+    --muted-foreground: 0 0% 75%;
+
+    --accent: 46 100% 55%;
+    --accent-foreground: 204 62% 18%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 204 62% 32%;
+    --input: 204 62% 32%;
+    --ring: 46 100% 55%;
+    
+    --sidebar-background: 204 62% 15%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 46 100% 55%;
+    --sidebar-primary-foreground: 204 62% 15%;
+    --sidebar-accent: 204 62% 20%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 204 62% 25%;
+    --sidebar-ring: 46 100% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground relative overflow-x-hidden;
+    background-image: 
+      radial-gradient(circle at 15% 25%, hsl(var(--primary) / 0.25) 2px, transparent 2px),
+      radial-gradient(circle at 85% 75%, hsl(var(--primary) / 0.35) 1px, transparent 1px),
+      radial-gradient(circle at 45% 85%, hsl(var(--primary) / 0.35) 3px, transparent 3px),
+      radial-gradient(circle at 95% 15%, hsl(var(--primary) / 0.15) 1.5px, transparent 1.5px),
+      radial-gradient(circle at 5% 95%, hsl(var(--primary) / 0.2) 2px, transparent 2px),
+      radial-gradient(circle at 70% 30%, hsl(var(--primary) / 0.1) 1px, transparent 1px),
+      linear-gradient(45deg, transparent 98%, hsl(var(--primary) / 0.03) 100%),
+      linear-gradient(-45deg, transparent 97%, hsl(var(--primary) / 0.04) 100%);
+    background-size: 
+      100px 100px,
+      80px 80px,
+      120px 120px,
+      90px 90px,
+      110px 110px,
+      70px 70px,
+      200px 200px,
+      180px 180px;
+    background-position:
+      0 0,
+      50px 50px,
+      100px 30px,
+      30px 100px,
+      80px 80px,
+      120px 20px,
+      0 0,
+      100px 100px;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
